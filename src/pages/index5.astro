@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../sections/Footer.astro";
+import HeroImagen from "../sections/HeroImagen.astro";
+import MasInfo from "../sections/MasInfo.astro";
+
+import {
+  CONFIG,
+  PROGRAMA,
+} from "../conts/Especializacion-en-Finanzas-Corporativas";
+import TituloPrograma from "../sections/TituloPrograma.astro";
+import Boton from "../components/Boton.astro";
+import WhatsApp from "../components/WhatsApp.astro";
+import AltaCalidad from "../components/AltaCalidad.astro";
+import ElegirCesa from "../components/ElegirCesa.astro";
+---
+
+<Layout title="">
+  <HeroImagen Programa={PROGRAMA} />
+  <MasInfo colorFondo={CONFIG.colorPrincipal}>
+    <p style="color: #fff;">
+      Conoce mejor <strong style=`color: ${CONFIG.colorSecundario};`
+        >las líneas directas de crédito</strong
+      > que tiene el <strong>CESA</strong> para que puedas estudiar tu
+    </p>
+    <TituloPrograma programa={PROGRAMA} config={CONFIG}>
+      <span slot="snies" style="color: #fff;">
+        <span
+          slot="snies"
+          style=`font-weight: lighter; color: ${CONFIG.colorSecundario}`
+          >SNIES: {PROGRAMA.snies}</span
+        >
+      </span>
+    </TituloPrograma>
+    <br />
+    <br />
+    <Boton
+      texto="Inscríbete Aquí"
+      url={PROGRAMA.inscripcion}
+      colorFondo={CONFIG.colorSecundario}
+    />
+    <br />
+    <WhatsApp />
+    <br />
+    <AltaCalidad />
+  </MasInfo>
+  <Footer config={CONFIG} />
+</Layout>

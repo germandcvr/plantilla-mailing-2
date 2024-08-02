@@ -1,0 +1,100 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../sections/Footer.astro";
+import HeroImagen from "../sections/HeroImagen.astro";
+import MasInfo from "../sections/MasInfo.astro";
+
+import {
+  CONFIG,
+  PROGRAMA,
+} from "../conts/Especializacion-en-Finanzas-Corporativas";
+import TituloPrograma from "../sections/TituloPrograma.astro";
+import Boton from "../components/Boton.astro";
+import WhatsApp from "../components/WhatsApp.astro";
+import AltaCalidad from "../components/AltaCalidad.astro";
+---
+
+<Layout title="">
+  <HeroImagen Programa={PROGRAMA} />
+  <MasInfo colorFondo={CONFIG.colorPrincipal}>
+    <p style="color: #fff;">
+      <strong> Gracias por tu interés en estudiar la</strong>
+    </p>
+    <TituloPrograma programa={PROGRAMA} config={CONFIG}>
+      <span slot="snies" style="color: #fff;">
+        en el <strong>CESA </strong>
+        <span
+          slot="snies"
+          style=`font-weight: lighter; color: ${CONFIG.colorSecundario}`
+          >SNIES: {PROGRAMA.snies}</span
+        >
+      </span>
+    </TituloPrograma>
+
+    <p style="color: #fff; text-align: center;">
+      <strong>Gracias por tu interés en estudiar la</strong>
+    </p>
+
+    <Boton
+      texto="Haz Clic Aquí"
+      url={PROGRAMA.urlPrograma}
+      colorFondo={CONFIG.colorSecundario}
+    />
+  </MasInfo>
+
+  <MasInfo>
+    <br />
+    <p>
+      <strong style=`color: ${CONFIG.colorPrincipal}; font-size: 25px`
+        >MODALIDAD:</strong
+      >
+      {PROGRAMA.modalidad}
+    </p>
+    <p>
+      <strong style=`color: ${CONFIG.colorPrincipal}; font-size: 25px`
+        >HORARIO:</strong
+      >
+      <p set:html={PROGRAMA.horario} />
+    </p>
+
+    <p>
+      Cuando tengamos la participación de profesores internacionales, se dictará
+      clase de lunes a juevez de 5:00 p. m. a 9:30 p. m. y tanto viernes cómo
+      sábado de 8:00 a. m. a 5:00 p. m.
+    </p>
+
+    <p>
+      <strong style=`color: ${CONFIG.colorPrincipal}; font-size: 25px`
+        >INTENSIDAD:</strong
+      >
+      {PROGRAMA.intensidad}
+    </p>
+
+    <div>
+      <strong style=`color: ${CONFIG.colorPrincipal}; font-size: 25px`
+        >INVERSIÓN POR SEMESTRE:</strong
+      >
+      <br /><br />
+      {PROGRAMA.inversion}
+      <br />
+      Valor del semestre - Tarifa 2024
+
+      <p style="font-size: 15px;">
+        Nota: El valor de la inversión se incrementa anualmente
+      </p>
+    </div>
+  </MasInfo>
+  <MasInfo colorFondo={CONFIG.colorPrincipal}>
+	<br>
+    <Boton
+      texto="Inscríbete Aquí"
+      url={PROGRAMA.inscripcion}
+      colorFondo={CONFIG.colorSecundario}
+    />
+    <br />
+    <WhatsApp />
+    <br />
+    <AltaCalidad />
+  </MasInfo>
+  <Footer config={CONFIG} />
+</Layout>

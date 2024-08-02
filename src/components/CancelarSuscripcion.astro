@@ -1,0 +1,22 @@
+---
+const { colorFondo = "#13387f" } = Astro.props;
+---
+<div
+  style=` 
+    background-color: ${colorFondo}; 
+    color: #ffffff; 
+    text-align: center; 
+    font-size: 10px;
+    font-size: clamp(5px, 3vw, 10px);
+    padding: 10px 8px;
+    padding: 10px clamp(5px, 3vw, 10px);`
+    >
+  <span
+    >Recibes este correo electrónico porque estás inscrito a los boletines del
+    CESA,<a
+      style=" color: #ffffff; font-weight: bold; text-decoration: none; "
+      href="{{Unsubscribe}}"
+      target="_blank">Puedes cancelar esta suscripción aquí</a
+    ></span
+  >
+</div>

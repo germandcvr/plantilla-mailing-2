@@ -1,0 +1,13 @@
+---
+import CancelarSuscripcion from "../components/CancelarSuscripcion.astro";
+import Politicas from "../components/Politicas.astro";
+import RedesSociales from "../components/RedesSociales.astro";
+
+const { config = [] } = Astro.props
+---
+
+<div>
+    <Politicas />
+    <RedesSociales />
+    <CancelarSuscripcion colorFondo={config.colorSecundario} />
+</div>

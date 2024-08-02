@@ -15,13 +15,16 @@ import ElegirCesa from '../components/ElegirCesa.astro';
 <Layout title="">
 	<HeroImagen Programa={PROGRAMA} />
 	<MasInfo colorFondo={CONFIG.colorPrincipal} >
-		<p style="color: #fff;">Conoce más acerca del <strong>CESA</strong> y su</p>
+		<p style="color: #fff;">Sabemos que quieres <strong>avanzar profesionalmente estudiando</strong> una</p>
 		<TituloPrograma programa={PROGRAMA} config={CONFIG} > 
 			<span slot="snies" style=`font-weight: lighter; color: ${CONFIG.colorSecundario}` >SNIES: {PROGRAMA.snies}</span>
 		</TituloPrograma>
 
-		<p style="color: #fff; text-align: center;">Para agendar tu visita al campus o asesoría virtual</p>
+		<p style="color: #fff; text-align: center;">conoce las ventajas en el <strong>CESA</strong></p>
 
+		<ElegirCesa />
+
+		<p style="color: #fff; text-align: center;"><strong>Para solicitar tu asesoría</strong></p>
 		<Boton texto="Haz Clic Aquí" url={PROGRAMA.urlPrograma} colorFondo={CONFIG.colorSecundario}  />
 		<Boton texto="Inscríbete Aquí" url={PROGRAMA.inscripcion} colorFondo={CONFIG.colorSecundario}  />
 		<br>

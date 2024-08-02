@@ -1,0 +1,6 @@
+---
+const { colorFondo = '' } = Astro.props
+---
+<div style=`padding: 10px 30px; padding: 10px clamp(8px, 5vw, 40px); background-color: ${colorFondo};`>
+    <slot />
+</div>

@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../sections/Footer.astro";
+import HeroImagen from "../sections/HeroImagen.astro";
+import MasInfo from "../sections/MasInfo.astro";
+
+import {
+  CONFIG,
+  PROGRAMA,
+} from "../conts/Especializacion-en-Finanzas-Corporativas";
+import TituloPrograma from "../sections/TituloPrograma.astro";
+import Boton from "../components/Boton.astro";
+import WhatsApp from "../components/WhatsApp.astro";
+import AltaCalidad from "../components/AltaCalidad.astro";
+import ElegirCesa from "../components/ElegirCesa.astro";
+---
+
+<Layout title="">
+  <HeroImagen Programa={PROGRAMA} />
+  <MasInfo colorFondo={CONFIG.colorPrincipal}>
+    <p style="color: #fff;">
+      Si todavía tienes dudas sobre <strong
+        style=`color: ${CONFIG.colorSecundario};`
+        >tu inscripción a nuestra</strong
+      >
+    </p>
+    <TituloPrograma programa={PROGRAMA} config={CONFIG}>
+      <span slot="snies" style="color: #fff;">
+        en el <strong>CESA </strong>
+        <span
+          slot="snies"
+          style=`font-weight: lighter; color: ${CONFIG.colorSecundario}`
+          >SNIES: {PROGRAMA.snies}</span
+        >
+      </span>
+    </TituloPrograma>
+
+    <p style="color: #fff; text-align: center;">
+      <strong>Agenda una asesoría personalizada</strong>
+    </p>
+    <Boton
+      texto="Haz Clic Aquí"
+      url={PROGRAMA.urlPrograma}
+      colorFondo={CONFIG.colorSecundario}
+    />
+    <Boton
+      texto="Inscríbete Aquí"
+      url={PROGRAMA.inscripcion}
+      colorFondo={CONFIG.colorSecundario}
+    />
+    <br />
+    <WhatsApp />
+    <br />
+    <AltaCalidad />
+  </MasInfo>
+  <Footer config={CONFIG} />
+</Layout>
