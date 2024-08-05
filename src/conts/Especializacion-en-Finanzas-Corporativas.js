@@ -1,4 +1,4 @@
-// EFC - Especialización en Finanzas Corporativas
+// EFC - Especialización en Finanzas Corporativas 
 export const CONFIG = {
     colorPrincipal: '#182D68',
     colorSecundario: '#5CC5B3'

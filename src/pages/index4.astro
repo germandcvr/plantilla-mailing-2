@@ -7,21 +7,23 @@ import MasInfo from "../sections/MasInfo.astro";
 import {
   CONFIG,
   PROGRAMA,
-} from "../conts/Especializacion-en-Finanzas-Corporativas";
+} from "../conts/Docorado-en-Administracion";
 import TituloPrograma from "../sections/TituloPrograma.astro";
 import Boton from "../components/Boton.astro";
 import WhatsApp from "../components/WhatsApp.astro";
 import AltaCalidad from "../components/AltaCalidad.astro";
 import ElegirCesa from "../components/ElegirCesa.astro";
+import Saludo from "../components/Saludo.astro";
 ---
 
-<Layout title="">
+<Layout title={PROGRAMA.titulo} >
   <HeroImagen Programa={PROGRAMA} />
   <MasInfo colorFondo={CONFIG.colorPrincipal}>
+    <Saludo />
     <p style="color: #fff;">
       Si todavía tienes dudas sobre <strong
         style=`color: ${CONFIG.colorSecundario};`
-        >tu inscripción a nuestra</strong
+        >tu inscripción a nuestro</strong
       >
     </p>
     <TituloPrograma programa={PROGRAMA} config={CONFIG}>
@@ -42,14 +44,16 @@ import ElegirCesa from "../components/ElegirCesa.astro";
       texto="Haz Clic Aquí"
       url={PROGRAMA.urlPrograma}
       colorFondo={CONFIG.colorSecundario}
+      colorTexto={CONFIG.colorPrincipal}
     />
     <Boton
       texto="Inscríbete Aquí"
       url={PROGRAMA.inscripcion}
       colorFondo={CONFIG.colorSecundario}
+      colorTexto={CONFIG.colorPrincipal}
     />
     <br />
-    <WhatsApp />
+    <WhatsApp config={CONFIG} />
     <br />
     <AltaCalidad />
   </MasInfo>

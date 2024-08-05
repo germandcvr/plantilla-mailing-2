@@ -4,31 +4,33 @@ import Footer from '../sections/Footer.astro';
 import HeroImagen from '../sections/HeroImagen.astro';
 import MasInfo from '../sections/MasInfo.astro';
 
-import { CONFIG, PROGRAMA } from '../conts/Especializacion-en-Finanzas-Corporativas';
+import { CONFIG, PROGRAMA } from '../conts/Docorado-en-Administracion';
 import TituloPrograma from '../sections/TituloPrograma.astro';
 import Boton from '../components/Boton.astro';
 import WhatsApp from '../components/WhatsApp.astro';
 import AltaCalidad from '../components/AltaCalidad.astro';
 import ElegirCesa from '../components/ElegirCesa.astro';
+import Saludo from '../components/Saludo.astro';
 ---
 
-<Layout title="">
+<Layout title={PROGRAMA.titulo} >
 	<HeroImagen Programa={PROGRAMA} />
 	<MasInfo colorFondo={CONFIG.colorPrincipal} >
-		<p style="color: #fff;">Sabemos que quieres <strong>avanzar profesionalmente estudiando</strong> una</p>
+		<Saludo />
+		<p style="color: #fff;">Sabemos que quieres <strong>avanzar profesionalmente estudiando</strong> un</p>
 		<TituloPrograma programa={PROGRAMA} config={CONFIG} > 
 			<span slot="snies" style=`font-weight: lighter; color: ${CONFIG.colorSecundario}` >SNIES: {PROGRAMA.snies}</span>
 		</TituloPrograma>
 
-		<p style="color: #fff; text-align: center;">conoce las ventajas en el <strong>CESA</strong></p>
+		<p style="color: #fff; text-align: center;">conoce las ventajas de estudiar en el <strong>CESA</strong></p>
 
 		<ElegirCesa />
 
 		<p style="color: #fff; text-align: center;"><strong>Para solicitar tu asesoría</strong></p>
-		<Boton texto="Haz Clic Aquí" url={PROGRAMA.urlPrograma} colorFondo={CONFIG.colorSecundario}  />
-		<Boton texto="Inscríbete Aquí" url={PROGRAMA.inscripcion} colorFondo={CONFIG.colorSecundario}  />
+		<Boton texto="Haz Clic Aquí" url={PROGRAMA.urlPrograma} colorFondo={CONFIG.colorSecundario} colorTexto={CONFIG.colorPrincipal} />
+		<Boton texto="Inscríbete Aquí" url={PROGRAMA.inscripcion} colorFondo={CONFIG.colorSecundario} colorTexto={CONFIG.colorPrincipal} />
 		<br>
-		<WhatsApp />
+		<WhatsApp config={CONFIG} />
 		<br>
 		<AltaCalidad />
 	</MasInfo>

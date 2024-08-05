@@ -1,0 +1,33 @@
+---
+const { Programa = [] } = Astro.props;
+---
+<div
+  style={`
+    background: url('https://storage.grupored.com.co/img/${Programa.banner}.jpg'); 
+    height: 100%; 
+    width: 100%;
+    max-width: 600px; 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center center;
+  `}
+>
+  <div
+    style="
+        color: #ffffff;
+        padding: 10px 30px;
+        padding: 10px clamp(8px, 5vw, 40px);
+  "
+  >
+    <p>
+      <img
+        style="width: 250px"
+        src="https://storage.grupored.com.co/logo-cesa-2.png"
+        alt="Logo Cesa"
+      />
+    </p>
+
+    <strong>¡Hola ____!</strong>
+    <p style="margin-bottom: 500px;">Recipient.FirstName</p>
+  </div>
+</div>

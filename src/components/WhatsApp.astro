@@ -1,3 +1,6 @@
+---
+const { config=[] } = Astro.props
+---
 <div style="text-align: center;">
     <a
       href="https://api.whatsapp.com/send?phone=573154191199"
@@ -8,17 +11,18 @@
           color:#fff"
     >
       Si tienes alguna pregunta no dudes en escribirnos a nuestra línea <span
-            style="
-              background-color: #5CC5B3;
+            style=`
+              background-color: ${config.colorSecundario};
               border-radius: 10px;
-              color:#fff; 
+              color: ${config.colorPrincipal}; 
               padding: 3px 5px;
               display: inlen-block;
-              ">de whatsapp
+              `
+              >de whatsapp
             <img
               width="18px"
               style="max-width: 18px; min-width: 8px;"
-              src="https://storage.grupored.com.co/icon-whatsapp.png"
+              src="https://storage.grupored.com.co/icon-whatsapp-black.png"
               alt="Icono WhatsApp"
             /></span
           > estaremos atentos a tu mensaje.</p>

@@ -7,18 +7,20 @@ import MasInfo from "../sections/MasInfo.astro";
 import {
   CONFIG,
   PROGRAMA,
-} from "../conts/Especializacion-en-Finanzas-Corporativas";
+} from "../conts/Docorado-en-Administracion";
 import TituloPrograma from "../sections/TituloPrograma.astro";
 import Boton from "../components/Boton.astro";
 import WhatsApp from "../components/WhatsApp.astro";
 import AltaCalidad from "../components/AltaCalidad.astro";
+import Saludo from "../components/Saludo.astro";
 ---
 
-<Layout title="">
+<Layout title={PROGRAMA.titulo} >
   <HeroImagen Programa={PROGRAMA} />
   <MasInfo colorFondo={CONFIG.colorPrincipal}>
+    <Saludo />
     <p style="color: #fff;">
-      <strong> Gracias por tu interés en estudiar la</strong>
+      <strong> Gracias por tu interés en estudiar el</strong>
     </p>
     <TituloPrograma programa={PROGRAMA} config={CONFIG}>
       <span slot="snies" style="color: #fff;">
@@ -32,13 +34,14 @@ import AltaCalidad from "../components/AltaCalidad.astro";
     </TituloPrograma>
 
     <p style="color: #fff; text-align: center;">
-      <strong>Gracias por tu interés en estudiar la</strong>
+      Para conocer nuestra<strong> metodología y plan de estudios</strong>
     </p>
 
     <Boton
       texto="Haz Clic Aquí"
       url={PROGRAMA.urlPrograma}
       colorFondo={CONFIG.colorSecundario}
+      colorTexto={CONFIG.colorPrincipal}
     />
   </MasInfo>
 
@@ -58,16 +61,12 @@ import AltaCalidad from "../components/AltaCalidad.astro";
     </p>
 
     <p>
-      Cuando tengamos la participación de profesores internacionales, se dictará
-      clase de lunes a juevez de 5:00 p. m. a 9:30 p. m. y tanto viernes cómo
-      sábado de 8:00 a. m. a 5:00 p. m.
-    </p>
-
-    <p>
       <strong style=`color: ${CONFIG.colorPrincipal}; font-size: 25px`
         >INTENSIDAD:</strong
       >
       {PROGRAMA.intensidad}
+      <br>
+      Previa autorización del comité doctoral para terminar y sustentar su tesis doctoral.
     </p>
 
     <div>
@@ -75,7 +74,7 @@ import AltaCalidad from "../components/AltaCalidad.astro";
         >INVERSIÓN POR SEMESTRE:</strong
       >
       <br /><br />
-      {PROGRAMA.inversion}
+      <span style="font-size: 30px;">{PROGRAMA.inversion}</span>
       <br />
       Valor del semestre - Tarifa 2024
 
@@ -90,9 +89,10 @@ import AltaCalidad from "../components/AltaCalidad.astro";
       texto="Inscríbete Aquí"
       url={PROGRAMA.inscripcion}
       colorFondo={CONFIG.colorSecundario}
+      colorTexto={CONFIG.colorPrincipal}
     />
     <br />
-    <WhatsApp />
+    <WhatsApp config={CONFIG} />
     <br />
     <AltaCalidad />
   </MasInfo>
