@@ -1,35 +1,53 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Footer from '../sections/Footer.astro';
-import HeroImagen from '../sections/HeroImagen.astro';
-import MasInfo from '../sections/MasInfo.astro';
+import Layout from "../layouts/Layout.astro";
+import Footer from "../sections/Footer.astro";
+import HeroImagen from "../sections/HeroImagen.astro";
+import MasInfo from "../sections/MasInfo.astro";
 
-import TituloPrograma from '../sections/TituloPrograma.astro';
-import Boton from '../components/Boton.astro';
-import WhatsApp from '../components/WhatsApp.astro';
-import AltaCalidad from '../components/AltaCalidad.astro';
+import TituloPrograma from "../sections/TituloPrograma.astro";
+import Boton from "../components/Boton.astro";
+import WhatsApp from "../components/WhatsApp.astro";
+import AltaCalidad from "../components/AltaCalidad.astro";
 
-import { CONFIG, PROGRAMA } from '../conts/Docorado-en-Administracion';
-import Saludo from '../components/Saludo.astro';
+import { CONFIG, PROGRAMA } from "../conts/Maestria-en-Finanzas-Corporativas";
+import Saludo from "../components/Saludo.astro";
+import Hero from "../sections/Hero.astro";
 ---
 
-<Layout title={PROGRAMA.titulo} >
-	<HeroImagen Programa={PROGRAMA} />
-	<MasInfo colorFondo={CONFIG.colorPrincipal} >
-		<Saludo />
-		<p style="color: #fff; text-align: center;">Conoce más acerca del <strong>CESA</strong> y su</p>
-		<TituloPrograma programa={PROGRAMA} config={CONFIG} > 
-			<span slot="snies" style=`font-weight: lighter; color: ${CONFIG.colorSecundario}` >SNIES: {PROGRAMA.snies}</span>
-		</TituloPrograma>
+<Layout title={PROGRAMA.titulo}>
+  <Hero Programa={PROGRAMA} />
+  <MasInfo colorFondo={CONFIG.colorPrincipal}>
+    <p style="color: #fff; ">
+      Conoce más acerca del <strong>CESA</strong> y su
+    </p>
+    <TituloPrograma programa={PROGRAMA} config={CONFIG}>
+      <span
+        slot="snies"
+        style=`font-weight: lighter; color: ${CONFIG.colorSecundario}`
+        >SNIES: {PROGRAMA.snies}</span
+      >
+    </TituloPrograma>
 
-		<p style="color: #fff; text-align: center;">Para agendar tu visita al campus o asesoría virtual</p>
+    <p style="color: #fff; text-align: center;">
+      Para agendar tu visita al campus o asesoría virtual
+    </p>
 
-		<Boton texto="Haz Clic Aquí" url={PROGRAMA.urlPrograma} colorFondo={CONFIG.colorSecundario} colorTexto={CONFIG.colorPrincipal} />
-		<Boton texto="Inscríbete Aquí" url={PROGRAMA.inscripcion} colorFondo={CONFIG.colorSecundario} colorTexto={CONFIG.colorPrincipal} />
-		<br>
-		<WhatsApp config={CONFIG} />
-		<br>
-		<AltaCalidad />
-	</MasInfo>
-	<Footer config={CONFIG} />
+    <Boton
+      texto="Haz Clic Aquí"
+      url={PROGRAMA.urlPrograma}
+      colorFondo={CONFIG.colorSecundario}
+      colorTexto={CONFIG.colorPrincipal}
+    />
+    <Boton
+      texto="Inscríbete Aquí"
+      url={PROGRAMA.inscripcion}
+      colorFondo={CONFIG.colorSecundario}
+      colorTexto={CONFIG.colorPrincipal}
+    />
+    <br />
+    <WhatsApp config={CONFIG} />
+    <br />
+    <AltaCalidad />
+  </MasInfo>
+  <Footer config={CONFIG} />
 </Layout>

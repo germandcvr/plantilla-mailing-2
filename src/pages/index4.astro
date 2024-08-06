@@ -7,23 +7,23 @@ import MasInfo from "../sections/MasInfo.astro";
 import {
   CONFIG,
   PROGRAMA,
-} from "../conts/Docorado-en-Administracion";
+} from "../conts/Maestria-en-Finanzas-Corporativas";
 import TituloPrograma from "../sections/TituloPrograma.astro";
 import Boton from "../components/Boton.astro";
 import WhatsApp from "../components/WhatsApp.astro";
 import AltaCalidad from "../components/AltaCalidad.astro";
 import ElegirCesa from "../components/ElegirCesa.astro";
 import Saludo from "../components/Saludo.astro";
+import Hero from "../sections/Hero.astro";
 ---
 
 <Layout title={PROGRAMA.titulo} >
-  <HeroImagen Programa={PROGRAMA} />
+  <Hero Programa={PROGRAMA} />
   <MasInfo colorFondo={CONFIG.colorPrincipal}>
-    <Saludo />
     <p style="color: #fff;">
       Si todavía tienes dudas sobre <strong
         style=`color: ${CONFIG.colorSecundario};`
-        >tu inscripción a nuestro</strong
+        >tu inscripción a nuestra</strong
       >
     </p>
     <TituloPrograma programa={PROGRAMA} config={CONFIG}>

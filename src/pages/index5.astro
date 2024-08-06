@@ -4,22 +4,19 @@ import Footer from "../sections/Footer.astro";
 import HeroImagen from "../sections/HeroImagen.astro";
 import MasInfo from "../sections/MasInfo.astro";
 
-import {
-  CONFIG,
-  PROGRAMA,
-} from "../conts/Docorado-en-Administracion";
+import { CONFIG, PROGRAMA } from "../conts/Maestria-en-Finanzas-Corporativas";
 import TituloPrograma from "../sections/TituloPrograma.astro";
 import Boton from "../components/Boton.astro";
 import WhatsApp from "../components/WhatsApp.astro";
 import AltaCalidad from "../components/AltaCalidad.astro";
 import ElegirCesa from "../components/ElegirCesa.astro";
 import Saludo from "../components/Saludo.astro";
+import Hero from "../sections/Hero.astro";
 ---
 
-<Layout title={PROGRAMA.titulo} >
-  <HeroImagen Programa={PROGRAMA} />
+<Layout title={PROGRAMA.titulo}>
+  <Hero Programa={PROGRAMA} />
   <MasInfo colorFondo={CONFIG.colorPrincipal}>
-    <Saludo />
     <p style="color: #fff;">
       Conoce mejor <strong style=`color: ${CONFIG.colorSecundario};`
         >las líneas directas de crédito</strong
