@@ -9,7 +9,7 @@ import Boton from "../components/Boton.astro";
 import WhatsApp from "../components/WhatsApp.astro";
 import AltaCalidad from "../components/AltaCalidad.astro";
 
-import { CONFIG, PROGRAMA } from "../conts/Maestria-en-Finanzas-Corporativas";
+import { CONFIG, PROGRAMA } from "../conts/Maestria-en-Administracion-de-Empresas";
 import Saludo from "../components/Saludo.astro";
 import Hero from "../sections/Hero.astro";
 ---
@@ -35,14 +35,12 @@ import Hero from "../sections/Hero.astro";
     <Boton
       texto="Haz Clic Aquí"
       url={PROGRAMA.urlPrograma}
-      colorFondo={CONFIG.colorSecundario}
-      colorTexto={CONFIG.colorPrincipal}
+      colorFondo={CONFIG.colorTercero}
     />
     <Boton
       texto="Inscríbete Aquí"
       url={PROGRAMA.inscripcion}
-      colorFondo={CONFIG.colorSecundario}
-      colorTexto={CONFIG.colorPrincipal}
+      colorFondo={CONFIG.colorTercero}
     />
     <br />
     <WhatsApp config={CONFIG} />

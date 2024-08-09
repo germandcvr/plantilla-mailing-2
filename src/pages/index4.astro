@@ -3,11 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import Footer from "../sections/Footer.astro";
 import HeroImagen from "../sections/HeroImagen.astro";
 import MasInfo from "../sections/MasInfo.astro";
-
-import {
-  CONFIG,
-  PROGRAMA,
-} from "../conts/Maestria-en-Finanzas-Corporativas";
 import TituloPrograma from "../sections/TituloPrograma.astro";
 import Boton from "../components/Boton.astro";
 import WhatsApp from "../components/WhatsApp.astro";
@@ -15,6 +10,8 @@ import AltaCalidad from "../components/AltaCalidad.astro";
 import ElegirCesa from "../components/ElegirCesa.astro";
 import Saludo from "../components/Saludo.astro";
 import Hero from "../sections/Hero.astro";
+
+import { CONFIG, PROGRAMA } from "../conts/Maestria-en-Administracion-de-Empresas";
 ---
 
 <Layout title={PROGRAMA.titulo} >
@@ -43,14 +40,12 @@ import Hero from "../sections/Hero.astro";
     <Boton
       texto="Haz Clic Aquí"
       url={PROGRAMA.urlPrograma}
-      colorFondo={CONFIG.colorSecundario}
-      colorTexto={CONFIG.colorPrincipal}
+      colorFondo={CONFIG.colorTercero}
     />
     <Boton
       texto="Inscríbete Aquí"
       url={PROGRAMA.inscripcion}
-      colorFondo={CONFIG.colorSecundario}
-      colorTexto={CONFIG.colorPrincipal}
+      colorFondo={CONFIG.colorTercero}
     />
     <br />
     <WhatsApp config={CONFIG} />

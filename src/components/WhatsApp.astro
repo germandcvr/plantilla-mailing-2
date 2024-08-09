@@ -1,5 +1,8 @@
 ---
 const { config=[] } = Astro.props
+
+const colorFondo = config.colorTercero
+const colorTexto = '#fff'
 ---
 <div style="text-align: center;">
     <a
@@ -12,9 +15,9 @@ const { config=[] } = Astro.props
     >
       Si tienes alguna pregunta no dudes en escribirnos a nuestra línea <span
             style=`
-              background-color: ${config.colorSecundario};
+              background-color: ${colorFondo};
               border-radius: 10px;
-              color: ${config.colorPrincipal}; 
+              color: ${colorTexto}; 
               padding: 3px 5px;
               display: inlen-block;
               `
@@ -22,7 +25,7 @@ const { config=[] } = Astro.props
             <img
               width="18px"
               style="max-width: 18px; min-width: 8px;"
-              src="https://storage.grupored.com.co/icon-whatsapp-black.png"
+              src="https://storage.grupored.com.co/icon-whatsapp.png"
               alt="Icono WhatsApp"
             /></span
           > estaremos atentos a tu mensaje.</p>

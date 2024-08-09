@@ -3,14 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import Footer from "../sections/Footer.astro";
 import HeroImagen from "../sections/HeroImagen.astro";
 import MasInfo from "../sections/MasInfo.astro";
-
-import { CONFIG, PROGRAMA } from "../conts/Maestria-en-Finanzas-Corporativas";
 import TituloPrograma from "../sections/TituloPrograma.astro";
 import Boton from "../components/Boton.astro";
 import WhatsApp from "../components/WhatsApp.astro";
 import AltaCalidad from "../components/AltaCalidad.astro";
 import Saludo from "../components/Saludo.astro";
 import Hero from "../sections/Hero.astro";
+
+import { CONFIG, PROGRAMA } from "../conts/Maestria-en-Administracion-de-Empresas";
 ---
 
 <Layout title={PROGRAMA.titulo}>
@@ -37,21 +37,20 @@ import Hero from "../sections/Hero.astro";
     <Boton
       texto="Haz Clic Aquí"
       url={PROGRAMA.urlPrograma}
-      colorFondo={CONFIG.colorSecundario}
-      colorTexto={CONFIG.colorPrincipal}
+      colorFondo={CONFIG.colorTercero}
     />
   </MasInfo>
 
   <MasInfo>
     <br />
     <p>
-      <strong style=`color: ${CONFIG.colorPrincipal}; font-size: 25px`
+      <strong style=`color: ${CONFIG.colorTercero}; font-size: 25px`
         >MODALIDAD:</strong
       >
       {PROGRAMA.modalidad}
     </p>
     <p>
-      <strong style=`color: ${CONFIG.colorPrincipal}; font-size: 25px`
+      <strong style=`color: ${CONFIG.colorTercero}; font-size: 25px`
         >HORARIO:</strong
       >
       <p set:html={PROGRAMA.horario} />
@@ -61,19 +60,14 @@ import Hero from "../sections/Hero.astro";
         >Disponibilidad de tiempo completo para asignaturas internacionales.</em>
     </p>
     <p>
-      Cuando tengamos la participación de profesores internacionales, se dictará
-      clase de lunes a jueves de 5:30 p. m. a 9:30 p. m. y tanto viernes cómo
-      sábados de 8:00 a. m. a 5:00 p. m.
-    </p>
-    <p>
-      <strong style=`color: ${CONFIG.colorPrincipal}; font-size: 25px`
+      <strong style=`color: ${CONFIG.colorTercero}; font-size: 25px`
         >INTENSIDAD:</strong
       >
       {PROGRAMA.intensidad}
       <br />
     </p>
     <div>
-      <strong style=`color: ${CONFIG.colorPrincipal}; font-size: 25px`
+      <strong style=`color: ${CONFIG.colorTercero}; font-size: 25px`
         >INVERSIÓN POR SEMESTRE:</strong
       >
       <br /><br />
@@ -91,8 +85,7 @@ import Hero from "../sections/Hero.astro";
     <Boton
       texto="Inscríbete Aquí"
       url={PROGRAMA.inscripcion}
-      colorFondo={CONFIG.colorSecundario}
-      colorTexto={CONFIG.colorPrincipal}
+      colorFondo={CONFIG.colorTercero}
     />
     <br />
     <WhatsApp config={CONFIG} />
