@@ -11,11 +11,11 @@ import ElegirCesa from "../components/ElegirCesa.astro";
 import Saludo from "../components/Saludo.astro";
 import Hero from "../sections/Hero.astro";
 
-import { CONFIG, PROGRAMA } from "../conts/Maestria-en-Administracion-de-Empresas";
+import { CONFIG, PROGRAMA } from "../conts/Maestria-en-Liderazgo-en-Transformacion-Digital";
 ---
 
 <Layout title={PROGRAMA.titulo} >
-  <Hero Programa={PROGRAMA} />
+  <HeroImagen Programa={PROGRAMA} />
   <MasInfo colorFondo={CONFIG.colorPrincipal}>
     <p style="color: #fff;">
       Si todavía tienes dudas sobre <strong
@@ -28,7 +28,7 @@ import { CONFIG, PROGRAMA } from "../conts/Maestria-en-Administracion-de-Empresa
         en el <strong>CESA </strong>
         <span
           slot="snies"
-          style=`font-weight: lighter; color: ${CONFIG.colorSecundario}`
+          style=`font-weight: lighter; color: ${CONFIG.colorSecundario};  background-color: ${CONFIG.colorTercero};`
           >SNIES: {PROGRAMA.snies}</span
         >
       </span>
