@@ -2,7 +2,7 @@
 const { config=[] } = Astro.props
 
 const colorFondo = config.colorTercero
-const colorTexto = '#fff'
+const colorTexto = config.colorPrincipal
 ---
 <div style="text-align: center;">
     <a
@@ -25,7 +25,7 @@ const colorTexto = '#fff'
             <img
               width="18px"
               style="max-width: 18px; min-width: 8px;"
-              src="https://storage.grupored.com.co/icon-whatsapp.png"
+              src="https://storage.grupored.com.co/icon-whatsapp-black.png"
               alt="Icono WhatsApp"
             /></span
           > estaremos atentos a tu mensaje.</p>

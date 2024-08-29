@@ -9,39 +9,30 @@ import Boton from "../components/Boton.astro";
 import WhatsApp from "../components/WhatsApp.astro";
 import AltaCalidad from "../components/AltaCalidad.astro";
 
-import { CONFIG, PROGRAMA } from "../conts/Maestria-en-Liderazgo-en-Transformacion-Digital";
+import { CONFIG, PROGRAMA } from "../conts/Coffe-Break-posgrados";
 import Saludo from "../components/Saludo.astro";
 import Hero from "../sections/Hero.astro";
+import BotonCuadrado from "../components/BotonCuadrado.astro";
 ---
 
 <Layout title={PROGRAMA.titulo}>
-  <HeroImagen Programa={PROGRAMA} />
+  <Hero Programa={PROGRAMA} />
   <MasInfo colorFondo={CONFIG.colorPrincipal}>
-    <p style="color: #fff; ">
-      Conoce más acerca del <strong>CESA</strong> y su
-    </p>
-    <TituloPrograma programa={PROGRAMA} config={CONFIG}>
-      <span
-        slot="snies"
-        style=`font-weight: lighter; color: ${CONFIG.colorSecundario};  background-color: ${CONFIG.colorTercero};`
-        >SNIES: {PROGRAMA.snies}</span
-      >
-    </TituloPrograma>
+    <div style="text-align: center;">
+      <p style="color: #fff;">Te esperamos en el {PROGRAMA.titulo}. Un espacio para que</p>
+      <p style=`color: ${CONFIG.colorTercero};`><strong>CONVERSES</strong> con el director del programa del <span style=`color: ${CONFIG.colorPrincipal}; background-color: ${CONFIG.colorTercero}; padding: 2px 5px;` >posgrado</span> de tu interés.</p>
+      <p style=`color: ${CONFIG.colorTercero};` ><strong>CONOZCAS</strong> los beneficios y financiación.</p>
 
-    <p style="color: #fff; text-align: center;">
-      Para agendar tu visita al campus o asesoría virtual
-    </p>
+      <p style="color: #fff;">En el <span style="font-weight: lighter;">CESA</span>, potenci tu liderazgo para que alcances el siguiente nivel. </p>
 
-    <Boton
-      texto="Haz Clic Aquí"
-      url={PROGRAMA.urlPrograma}
-      colorFondo={CONFIG.colorTercero}
-    />
-    <Boton
-      texto="Inscríbete Aquí"
-      url={PROGRAMA.inscripcion}
-      colorFondo={CONFIG.colorTercero}
-    />
+      <p style="color: #fff; margin-bottom: 0;">Te esperamos en el</p>
+      <span style=`font-size: 30px; font-size: clamp(30px, 8vw, 50px); background-color: #fff; color: ${CONFIG.colorSecundario};` >Club el Nogal</span>
+      <p style="color: #fff; margin-top: 0; font-size: 30px; font-size: clamp(20px, 8vw, 40px);">HORA 5:30 P. M.</p>
+
+      <p style=`color: ${CONFIG.colorSecundario};` ><strong>¡Nos vemos Pronto!</strong></p>
+
+      <BotonCuadrado texto="Reserva tu Cupo" url="#" colorTexto={CONFIG.colorTercero} colorBorde={CONFIG.colorTercero} />
+    </div>
     <br />
     <WhatsApp config={CONFIG} />
     <br />

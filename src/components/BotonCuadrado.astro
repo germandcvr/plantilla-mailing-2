@@ -1,0 +1,23 @@
+---
+const { texto, url, colorBorde = '#13387f', colorTexto="#fff" } = Astro.props;
+---
+<div style="text-align: center; padding: 10px 0px;">
+    <a
+      href={url}
+      target="_blank"
+      style=`
+          border-radius: 1px;
+          font-size: 25px;
+          font-size: clamp(14px, 5vw, 25px);
+          padding: 10px 30px;
+          padding: 10px clamp(8px, 5vw, 40px);
+          text-decoration: none;
+          color: ${colorTexto};
+          text-transform: uppercase;
+          font-weight: 200;
+          cursor: pointer;
+          display: inline-block;
+          border: 2px solid ${colorBorde};
+          `
+    >{texto}</a>
+</div>  
