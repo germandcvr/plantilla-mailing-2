@@ -6,7 +6,7 @@ Este es un proyecto para automatizar la creación de cortes HTML para el CESA.
 
 <div align="center">
 
-![Captura de la plantilla](https://github.com/germandcvr/plantilla-mailing-1/blob/main/assets/img/plantilla.png)
+![Captura de la plantilla](https://github.com/germandcvr/plantilla-mailing-2/blob/main/assets/img/plantilla.png)
 
 </div>
 
