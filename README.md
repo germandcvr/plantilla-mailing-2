@@ -1,54 +1,65 @@
-# Astro Starter Kit: Basics
+<a name="readme-top"></a>
+
+# Plantilla Automatización Creación de Cortes CESA
+
+Este es un proyecto para automatizar la creación de cortes HTML para el CESA.
+
+<div align="center">
+
+![Captura de la plantilla](https://github.com/germandcvr/plantilla-mailing-1/blob/main/assets/img/plantilla.png)
+
+</div>
+
+## Para empezar
+
+### Prerrequisitos
+
+- PNPM (es recomendable esta instalación por su rapidez y eficiencia)
 
 ```sh
-npm create astro@latest -- --template basics
+npm install -g pnpm
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+- O NPM
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+npm install npm@latest -g
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Instalación en entorno local
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+1. Clonar el repositorio
 
-Any static assets, like images, can be placed in the `public/` directory.
+```sh
+git clone <URL del repositorio>
+```
 
-## 🧞 Commands
+2. Instalar los paquetes de NPM
 
-All commands are run from the root of the project, from a terminal:
+```sh
+pnpm install | npm install
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+3. Ejecutar el proyecto
 
-## 👀 Want to learn more?
+```sh
+pnpm run dev | npm run dev
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Contribuir y utilizar el proyecto
+
+Si tienes alguna sugerencia que podría mejorar el proyecto, por favor, haz un [_fork_](https://github.com/germandcvr/plantilla-mailing-1/fork) del repositorio y crea una [_pull request_](https://github.com/germandcvr/plantilla-mailing-1/pulls). También puedes simplemente abrir un [_issue_](https://github.com/germandcvr/plantilla-mailing-1/issues).
+
+Aquí tienes una guía rápida:
+
+1. Haz un [_fork_](https://github.com/germandcvr/plantilla-mailing-1/fork).
+2. Clona tu [_fork_](https://github.com/germandcvr/plantilla-mailing-1/fork) (`git clone <URL del fork>`).
+3. Añade el repositorio original como remoto (`git remote add upstream <URL del repositorio original>`).
+4. Crea tu rama de funcionalidad (`git switch -c feature/CaracteristicaIncreible`).
+5. Realiza tus cambios (`git commit -m 'Add: alguna CaracterísticaIncreíble'`).
+6. Haz push a la rama (`git push origin feature/CaracteristicaIncreible`).
+7. Abre una [_pull request_](https://github.com/germandcvr/plantilla-mailing-1/pulls).
+
+Por favor, consulta la [guía de contribución](https://github.com/germandcvr/plantilla-mailing-1/blob/main/CONTRIBUTING.md) para saber cómo puedes empezar de la mejor manera.
+
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
